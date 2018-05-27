@@ -5,27 +5,30 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class HelloWorldTres extends JFrame implements ActionListener
+public class HelloWorldCuatro extends JFrame implements ActionListener
 {
 	
 	private JLabel lbl_mensaje;
 	private JButton btn_aceptar;
 	private JTextField tf_mensaje;
 	
-	public HelloWorldTres()
+	public HelloWorldCuatro()
 	{
-		super("Hello World 3 !!!!");
+		super("Hello World 4 !!!!");
 		setSize(400, 200);
-		setLayout(new FlowLayout());
+		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		lbl_mensaje = new JLabel();
+		lbl_mensaje.setBounds(145, 40, 100, 25);
 		add(lbl_mensaje);
 		
 		tf_mensaje= new JTextField(20);
+		tf_mensaje.setBounds(100, 70, 200, 25);
 		add(tf_mensaje);
 		
 		btn_aceptar= new JButton("Aceptar");
+		btn_aceptar.setBounds(150, 100, 100, 25);
 		btn_aceptar.addActionListener(this);
 		add(btn_aceptar);
 		
@@ -38,7 +41,7 @@ public class HelloWorldTres extends JFrame implements ActionListener
 
 	public static void main(String[]args)
 	{
-		HelloWorldTres noce = new HelloWorldTres();
+		HelloWorldCuatro noce = new HelloWorldCuatro();
 	}
 
 	@Override
